@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  namespace: Evento
+  namespace: evento
   name: mongodb
 spec: 
   replicas: 1

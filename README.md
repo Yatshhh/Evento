@@ -88,7 +88,7 @@ eksctl version
 
 ### Step 7: Setup EKS Cluster
 ``` shell
-eksctl create cluster --name Evento-cluster --region us-east-2 --node-type t2.medium --nodes-min 2 --nodes-max 2
+eksctl create cluster --name evento-cluster --region us-east-2 --node-type t2.medium --nodes-min 2 --nodes-max 2
 aws eks update-kubeconfig --region us-west-2 --name Evento-cluster
 kubectl get nodes
 ```
@@ -121,5 +121,5 @@ kubectl apply -f full_stack_lb.yaml
 ### Cleanup
 - To delete the EKS cluster:
 ``` shell
-eksctl delete cluster --name Evento-cluster --region us-east-2
+eksctl delete cluster --name evento-cluster --region us-east-2
 ```

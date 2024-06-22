@@ -1,0 +1,63 @@
+pipeline {
+    
+    agent any
+    environment{
+        SONAR_HOME = tool "Sonar"
+    }
+    stages {
+        
+        stage("Code"){
+            steps{
+                git url: "https://github.com/arpitsha25/Evento_Frontend.git" , branch: "master"
+                echo "Code Cloned Successfully"
+            }
+        }
+        stage("SonarQube Analysis"){
+            steps{
+               withSonarQubeEnv("Sonar"){
+                   sh "$SONAR_HOME/bin/sonar-scanner -Dsonar.projectName=Evento_Frontend -Dsonar.projectKey=Evento_Frontend -X"
+               }
+            }
+        }
+        stage("SonarQube Quality Gates"){
+            steps{
+               timeout(time: 1, unit: "MINUTES"){
+                   waitForQualityGate abortPipeline: false
+               }
+            }
+        }
+        stage("OWASP"){
+            steps{
+                dependencyCheck additionalArguments: '--scan ./', odcInstallation: 'OWASP'
+                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+            }
+        }
+        stage("Build & Test"){
+            steps{
+                sh 'docker build -t Evento_Frontend:latest .'
+                echo "Code Built Successfully"
+            }
+        }
+        stage("Trivy"){
+            steps{
+                sh "trivy image Evento_Frontend "
+            }
+        }
+        stage("Push to Private Docker Hub Repo"){
+            steps{
+                withCredentials([usernamePassword(credentialsId:"DockerHubCreds",passwordVariable:"dockerPass",usernameVariable:"dockerUser")]){
+                sh "docker login -u ${env.dockerUser} -p ${env.dockerPass}"
+                sh "docker tag Evento_Frontend:latest ${env.dockerUser}/Evento_Frontend:latest"
+                sh "docker push ${env.dockerUser}/Evento_Frontend:latest"
+                }
+                
+            }
+        }
+        stage("Deploy"){
+            steps{
+                sh "docker-compose down && docker-compose up -d"
+                echo "App Deployed Successfully"
+            }
+        }
+    }
+}

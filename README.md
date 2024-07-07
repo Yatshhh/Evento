@@ -3,18 +3,18 @@
 ## Overview
 Evento is an innovative application designed to streamline the process of organizing, hosting, and attending events. The platform offers a user-friendly interface for event planners, hosts, and attendees to create, manage, and join events effortlessly. Evento is a comprehensive solution catering to various event types, including conferences, workshops, social gatherings, and more.
 
-##Key Features
+## Key Features
 
 Event Creation and Management: Users can create events with detailed descriptions, schedules, and participant lists. Organizers have access to robust tools for managing invitations, RSVPs, and attendee communications.
 
-Hosting Tools: Evento provides hosts with features such as venue management, ticketing solutions, and real-time updates to ensure seamless event execution.
+**Hosting Tools:** Evento provides hosts with features such as venue management, ticketing solutions, and real-time updates to ensure seamless event execution.
 
-Attendee Experience: Attendees can easily browse, search, and register for events. They receive timely notifications and can engage with other participants through integrated social features.
+**Attendee Experience:** Attendees can easily browse, search, and register for events. They receive timely notifications and can engage with other participants through integrated social features.
 
-##Technical Architecture
+## Technical Architecture
 Evento is deployed using Elastic Kubernetes Services (EKS), ensuring scalability, reliability, and high availability. The deployment process leverages Kubernetes manifest files, facilitating declarative management of the application’s infrastructure and services. This setup allows for easy scaling to accommodate varying loads, ensuring a smooth user experience even during peak times.
 
-##DevSecOps Integration
+## DevSecOps Integration
 Security and compliance are integral to Evento’s deployment strategy. The project incorporates DevSecOps practices, embedding security into every phase of the development lifecycle. Automated security checks, continuous integration/continuous deployment (CI/CD) pipelines, and regular audits ensure that the application remains secure, resilient, and compliant with industry standards.
 
 ## Project Details

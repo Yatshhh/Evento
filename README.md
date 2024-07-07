@@ -1,31 +1,21 @@
 # #Evento-Event Management Application
 
 ## Overview
+Evento is an innovative application designed to streamline the process of organizing, hosting, and attending events. The platform offers a user-friendly interface for event planners, hosts, and attendees to create, manage, and join events effortlessly. Evento is a comprehensive solution catering to various event types, including conferences, workshops, social gatherings, and more.
 
+##Key Features
 
+Event Creation and Management: Users can create events with detailed descriptions, schedules, and participant lists. Organizers have access to robust tools for managing invitations, RSVPs, and attendee communications.
 
-## Prerequisites
-- Basic knowledge of Docker, and AWS services.
-- An AWS account with necessary permissions.
+Hosting Tools: Evento provides hosts with features such as venue management, ticketing solutions, and real-time updates to ensure seamless event execution.
 
-## Challenge Steps
-- [Application Code](#application-code)
-- [Jenkins Pipeline Code](#jenkins-pipeline-code)
-- [Jenkins Server Terraform](#jenkins-server-terraform)
-- [Kubernetes Manifests Files](#kubernetes-manifests-files)
-- [Project Details](#project-details)
+Attendee Experience: Attendees can easily browse, search, and register for events. They receive timely notifications and can engage with other participants through integrated social features.
 
-## Application Code
-The `Application-Code` directory contains the source code for the Evento Application. Dive into this directory to explore the frontend and backend implementations.
+##Technical Architecture
+Evento is deployed using Elastic Kubernetes Services (EKS), ensuring scalability, reliability, and high availability. The deployment process leverages Kubernetes manifest files, facilitating declarative management of the application’s infrastructure and services. This setup allows for easy scaling to accommodate varying loads, ensuring a smooth user experience even during peak times.
 
-## Jenkins Pipeline Code
-In the `Jenkins-Pipeline-Code` directory, you'll find Jenkins pipeline scripts. These scripts automate the CI/CD process, ensuring smooth integration and deployment of your application.
-
-## Jenkins Server Terraform
-Explore the `Jenkins-Server-TF` directory to find Terraform scripts for setting up the Jenkins Server on AWS. These scripts simplify the infrastructure provisioning process.
-
-## Kubernetes Manifests Files
-The `Kubernetes-Manifests-Files` directory holds Kubernetes manifests for deploying your application on AWS EKS. Understand and customize these files to suit your project needs.
+##DevSecOps Integration
+Security and compliance are integral to Evento’s deployment strategy. The project incorporates DevSecOps practices, embedding security into every phase of the development lifecycle. Automated security checks, continuous integration/continuous deployment (CI/CD) pipelines, and regular audits ensure that the application remains secure, resilient, and compliant with industry standards.
 
 ## Project Details
 🛠️ **Tools Explored:**

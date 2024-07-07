@@ -5,11 +5,14 @@ Evento is an innovative application designed to streamline the process of organi
 
 ## Key Features
 
-Event Creation and Management: Users can create events with detailed descriptions, schedules, and participant lists. Organizers have access to robust tools for managing invitations, RSVPs, and attendee communications.
+**Event Creation and Management:**
+Users can create events with detailed descriptions, schedules, and participant lists. Organizers have access to robust tools for managing invitations, RSVPs, and attendee communications.
 
-**Hosting Tools:** Evento provides hosts with features such as venue management, ticketing solutions, and real-time updates to ensure seamless event execution.
+**Hosting Tools:** 
+Evento provides hosts with features such as venue management, ticketing solutions, and real-time updates to ensure seamless event execution.
 
-**Attendee Experience:** Attendees can easily browse, search, and register for events. They receive timely notifications and can engage with other participants through integrated social features.
+**Attendee Experience:** 
+Attendees can easily browse, search, and register for events. They receive timely notifications and can engage with other participants through integrated social features.
 
 ## Technical Architecture
 Evento is deployed using Elastic Kubernetes Services (EKS), ensuring scalability, reliability, and high availability. The deployment process leverages Kubernetes manifest files, facilitating declarative management of the application’s infrastructure and services. This setup allows for easy scaling to accommodate varying loads, ensuring a smooth user experience even during peak times.

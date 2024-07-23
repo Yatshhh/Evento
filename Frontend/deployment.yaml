@@ -25,10 +25,10 @@ spec:
       - name: dockerhub-secrets
       containers:
       - name: frontend
-        image: 407622020962.dkr.ecr.us-east-1.amazonaws.com/frontend:latest
+        image: docker pull yatshhh/evento_frontend
         imagePullPolicy: Always
         env:
           - name: REACT_APP_BACKEND_URL
-            value: "http://challenge.trainwithshubham.com/api/tasks"
+            value: ""
         ports:
         - containerPort: 3000

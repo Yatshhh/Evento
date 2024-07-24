@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: api
+  name: backend
   namespace: evento
   labels: 
-    role: api
+    role: backend
     env: demo
 spec: 
   replicas: 1
@@ -15,16 +15,16 @@ spec:
       maxUnavailable: 25%
   selector: 
     matchLabels:
-      role: api
+      role: backend
   template:
     metadata:
       labels:
-        role: api
+        role: backend
     spec:
       imagePullSecrets:
       - name: ecr-registry-secret
       containers:
-      - name: api
+      - name: backend
         image: yatshhh/evento_backend
         imagePullPolicy: Always
         env:

@@ -13,11 +13,11 @@ spec:
     - host: backend.ysharmadevops.study
       http:
         paths:
-          - path: /api
+          - path: /backend
             pathType: Prefix
             backend:
               service:
-                name: api
+                name: backend
                 port:   
                   number: 8000
           - path: /

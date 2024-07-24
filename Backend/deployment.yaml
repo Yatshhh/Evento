@@ -29,7 +29,7 @@ spec:
         imagePullPolicy: Always
         env:
           - name: MONGO_CONN_STR
-            value: mongodb://mongodb-svc:27017/todo?directConnection=true
+            value: "mongodb+srv://cluster0admin:cluster0admin@cluster0.iq82tkg.mongodb.net/?retryWrites=true&w=majority"
           - name: MONGO_USERNAME
             valueFrom:
               secretKeyRef:
@@ -45,11 +45,7 @@ spec:
               secretKeyRef:
                 name: my-secrets
                 key: RFTGbuhijokCGVHBJjnk745623d84523wert84nrf8
-          - name: DB_URL
-            valueFrom:
-              secretKeyRef:
-                name: my-secrets
-                key: mongodb+srv://cluster0admin:cluster0admin@cluster0.iq82tkg.mongodb.net/?retryWrites=true&w=majority
+          
         ports:
         - containerPort: 8000
         livenessProbe: 

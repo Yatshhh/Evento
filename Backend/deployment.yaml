@@ -44,12 +44,12 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: my-secrets
-                key: JWT_SECRET_KEY
+                key: RFTGbuhijokCGVHBJjnk745623d84523wert84nrf8
           - name: DB_URL
             valueFrom:
               secretKeyRef:
                 name: my-secrets
-                key: DB_URL
+                key: mongodb+srv://cluster0admin:cluster0admin@cluster0.iq82tkg.mongodb.net/?retryWrites=true&w=majority
         ports:
         - containerPort: 8000
         livenessProbe: 

@@ -41,10 +41,7 @@ spec:
                 name: mongo-sec
                 key: password
           - name: JWT_SECRET_KEY
-            valueFrom:
-              secretKeyRef:
-                name: my-secrets
-                key: RFTGbuhijokCGVHBJjnk745623d84523wert84nrf8
+            value: "RFTGbuhijokCGVHBJjnk745623d84523wert84nrf8"
           
         ports:
         - containerPort: 8000

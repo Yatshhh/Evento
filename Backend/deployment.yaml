@@ -25,7 +25,7 @@ spec:
       - name: ecr-registry-secret
       containers:
       - name: api
-        image: 883297877610.dkr.ecr.us-east-2.amazonaws.com/evento_backend_registry:latest
+        image: docker pull yatshhh/evento_backend
         imagePullPolicy: Always
         env:
           - name: MONGO_CONN_STR
@@ -40,6 +40,16 @@ spec:
               secretKeyRef:
                 name: mongo-sec
                 key: password
+          - name: JWT_SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: my-secrets
+                key: JWT_SECRET_KEY
+          - name: DB_URL
+            valueFrom:
+              secretKeyRef:
+                name: my-secrets
+                key: DB_URL
         ports:
         - containerPort: 8000
         livenessProbe: 

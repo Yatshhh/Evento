@@ -44,17 +44,18 @@ spec:
             value: "RFTGbuhijokCGVHBJjnk745623d84523wert84nrf8"
           
         ports:
-        - containerPort: 8000
+        - containerPort: 5000
         livenessProbe: 
           httpGet:
             path: /ok
-            port: 8000
+            port: 5000
           initialDelaySeconds: 2
           periodSeconds: 5
         readinessProbe:
           httpGet:
             path: /ok
-            port: 8000
+            port: 5000
+            
           initialDelaySeconds: 5
           periodSeconds: 5
           successThreshold: 1
